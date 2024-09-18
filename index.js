@@ -51,6 +51,17 @@ async function getOAuthToken(apiName) {
   }
 }
 
+// Top level helper list of routes
+
+app.get("/", (req, res) => {
+  res.json({
+    routesWithExampleIDs: {
+      simSwap: "/sim-swap/447772000001",
+      callDivert: "/call-divert/447772000001",
+    },
+  });
+});
+
 // Sim Swap API route
 // Example url would be localhost:3000/sim-swap/447772000001
 
